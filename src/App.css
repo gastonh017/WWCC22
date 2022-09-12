@@ -6,8 +6,10 @@
 }
 
 .compMargin {
+  display: flex;
   margin-top: 100px;
-  margin: auto;
+  margin-left: 300px;
+  
 }
 
 

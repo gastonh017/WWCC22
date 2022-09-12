@@ -12,17 +12,18 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <div id='wrapper'>
           <Navbar />
+        <div fixed-left>
           <Sidebar />
+        </div>
+         
           <Routes>
-            <Route path='/' exact component={Home} />
-            <Route path='/teams' component={Teams} />
-            <Route path='/games' component={Games} />
+            <Route path='/' exact element={<Home />} />
+            <Route path='/teams' element={<Teams />} />
+            <Route path='/games' element={<Games/>} />
 
           </Routes>
 
-        </div>
       </BrowserRouter>
 
     </div>
