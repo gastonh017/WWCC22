@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./Components/NavBar"
 import Sidebar from './Components/Sidebar';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import Home from './Components/Home';
 import Teams from './Components/Teams';
@@ -12,23 +14,22 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <div className='row' >
+        <Row>
           <Navbar />
-        </div>
+        </ Row>
         
-        <div className='row' >
-          <div className='col-2 ' >
+        <Row>
+          <Col lg='2' >
             <Sidebar />
-          </div>
-          <div className='col-10 justify-content-start' >
-          <Routes>
-            <Route path='/' exact element={<Home />} />
-            <Route path='/teams' element={<Teams />} />
-            <Route path='/games' element={<Games/>} />
-
-          </Routes>
-          </div>
-        </div>
+          </Col>
+          <Col lg='10' >
+            <Routes>
+              <Route path='/' exact element={<Home  />} />
+              <Route path='/teams'  element={<Teams />} />
+              <Route path='/games'  element={<Games />} />
+            </Routes>
+          </Col>
+        </ Row>
 
       </BrowserRouter>
     </div>
