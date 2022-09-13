@@ -18,7 +18,7 @@ function App() {
           <Navbar />
         </ Row>
         
-        <Row>
+        <Row className ='margin_top' >
           <Col lg='2' >
             <Sidebar />
           </Col>

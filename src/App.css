@@ -14,7 +14,6 @@
 
 .sidebar {
   position: fixed;
-  margin-top: 76px;
   background-color: #6c757d;
   height: 100%;
   width: 15% ;
@@ -52,4 +51,8 @@
 }
 .row #title {
   flex: 70%
+}
+
+.margin_top{
+  margin-top: 76px;
 }
