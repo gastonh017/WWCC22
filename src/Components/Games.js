@@ -1,15 +1,26 @@
 import React, {useState, useEffect} from "react";
+// React-Bootstrap
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-const Card = ({index,offset,home_team_code,away_team_code,datetime}) => {
+const Cards = ({index,offset,home_team_code,away_team_code,datetime}) => {
     return(
-      <div className="card text-white bg-secondary mb-3 col-2" >
-        <div className="card-header">Partido {index + offset}</div>
-        <div className="card-body">
-          <h5 className="card-title"  >{home_team_code} - {away_team_code} </h5>
-          <p className="card-subtitle">{datetime.slice(0,10)}</p>
-          <p className="card-subtitle">{datetime.slice(11,16)} hs.</p>
-        </div>
-      </div>
+      // 'primary', => Azul
+      // 'secondary',
+      //   'Success',
+      //   'Danger',
+      //   'Warning',
+      //   'Info',
+      //   'Light',
+      //   'Dark',
+    <Card className="bg-secondary text-dark margin_card text-center" style={{ width: '11rem' }}>
+      <Card.Header className="bg-secondary text-light " >Partido {index + offset}</Card.Header>
+      <ListGroup variant="flush">
+        <ListGroup.Item className="bg-secondary text-light strong" >{home_team_code} - {away_team_code}</ListGroup.Item>
+        <ListGroup.Item className="bg-secondary text-light weak" >{datetime.slice(0,10)}</ListGroup.Item>
+        <ListGroup.Item className="bg-secondary text-light weak" >{datetime.slice(11,16)}</ListGroup.Item>
+      </ListGroup>
+    </Card>
     )
 }
 
@@ -43,9 +54,9 @@ export default function Games() {
 
         <div className = "row justify-content-evenly">
 
-            <h3 className="mt-5">Fase de grupos</h3>
+            <h3 className="mt-4">Fase de grupos</h3>
             {fase.map((element,index)=>
-              <Card key = {index}
+              <Cards key = {index}
                 index = {index}
                 offset = {1}
                 home_team_code = {element.home_team.code}
@@ -54,9 +65,9 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-5">Octavos de final</h3>
+            <h3 className="mt-4">Octavos de final</h3>
             {octavos.map((element,index)=>
-              <Card key = {index + 37}
+              <Cards key = {index + 37}
                 index = {index}
                 offset = {37}
                 home_team_code = {element.home_team.code}
@@ -65,9 +76,9 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-5">Cuartos de final</h3>
+            <h3 className="mt-4">Cuartos de final</h3>
             {cuartos.map((element,index)=>
-              <Card key = {index + 45}
+              <Cards key = {index + 45}
               index = {index}
               offset = {45}
               home_team_code = {element.home_team.code}
@@ -76,9 +87,9 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-5">Semi-finales</h3>
+            <h3 className="mt-4">Semi-finales</h3>
             {semis.map((element,index)=>
-              <Card key = {index + 49}
+              <Cards key = {index + 49}
                 index = {index}
                 offset = {49}
                 home_team_code = {element.home_team.code}
@@ -87,9 +98,9 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-5">Tercer puesto</h3>
+            <h3 className="mt-4">Tercer puesto</h3>
             {tercero.map((element,index)=>
-              <Card key = {index + 51}
+              <Cards key = {index + 51}
                 index = {index}
                 offset = {51}
                 home_team_code = {element.home_team.code}
@@ -98,9 +109,9 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-5">Final</h3>
+            <h3 className="mt-4">Final</h3>
             {final.map((element,index)=>
-             <Card key = {index + 52}
+             <Cards key = {index + 52}
               index = {index}
               offset = {52}
               home_team_code = {element.home_team.code}

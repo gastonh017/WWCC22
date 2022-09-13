@@ -53,6 +53,21 @@
   flex: 70%
 }
 
-.margin_top{
+.margin_top_sidebar{
   margin-top: 76px;
+}
+
+.margin_card{
+  margin: 5px 2px;
+  padding:5px 10px;
+  border-radius: 3px;
+}
+
+.strong{
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.weak{
+  font-size: 0.9rem;
 }

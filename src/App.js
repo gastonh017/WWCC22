@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./Components/NavBar"
 import Sidebar from './Components/Sidebar';
+// React-Bootstrap
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -18,7 +19,7 @@ function App() {
           <Navbar />
         </ Row>
         
-        <Row className ='margin_top' >
+        <Row className = 'margin_top_sidebar' >
           <Col lg='2' >
             <Sidebar />
           </Col>
