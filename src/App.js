@@ -12,20 +12,25 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <div className='row' >
           <Navbar />
-        <div fixed-left>
-          <Sidebar />
         </div>
-         
+        
+        <div className='row' >
+          <div className='col-2 ' >
+            <Sidebar />
+          </div>
+          <div className='col-10 justify-content-start' >
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/teams' element={<Teams />} />
             <Route path='/games' element={<Games/>} />
 
           </Routes>
+          </div>
+        </div>
 
       </BrowserRouter>
-
     </div>
   );
 }
