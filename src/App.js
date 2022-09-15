@@ -6,14 +6,15 @@ import Sidebar from './Components/Sidebar';
 import Home from './Components/Home';
 import Teams from './Components/Teams';
 import Games from './Components/Games';
+import Groups from './Components/Groups';
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <div>
           <Navbar />
-        <div fixed-left>
           <Sidebar />
         </div>
          
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' exact element={<Home />} />
             <Route path='/teams' element={<Teams />} />
             <Route path='/games' element={<Games/>} />
+            <Route path='/groups' element={<Groups/>} />
 
           </Routes>
 

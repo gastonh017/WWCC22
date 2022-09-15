@@ -54,3 +54,8 @@
 .row #title {
   flex: 70%
 }
+
+ /* diseño del componente teams */
+ .groups {
+  list-style: none;
+ }
