@@ -6,16 +6,14 @@
 }
 
 .compMargin {
-  display: flex;
-  margin-top: 100px;
-  margin-left: 300px;
+  margin-top: 0px;
+  margin-left: 0px;
   
 }
 
 
 .sidebar {
   position: fixed;
-  margin-top: 80px;
   background-color: #6c757d;
   height: 100%;
   width: 15% ;
@@ -55,7 +53,32 @@
   flex: 70%
 }
 
+<<<<<<< HEAD
  /* diseño del componente teams */
  .groups {
   list-style: none;
  }
+=======
+.margin_top_sidebar{
+  margin-top: 76px;
+}
+
+.margin_card{
+  margin: 8px 2px;
+  padding:5px 10px;
+  border-radius: 3%;
+}
+
+.strong{
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.weak{
+  font-size: 0.9rem;
+}
+
+.parrafo-canvas{
+  font-size: 0.8rem;
+}
+>>>>>>> 89124ed8916a6cfe0305536b3e8ff7331c474ebe

@@ -2,6 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./Components/NavBar"
 import Sidebar from './Components/Sidebar';
+// React-Bootstrap
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import Home from './Components/Home';
 import Teams from './Components/Teams';
@@ -27,7 +30,6 @@ function App() {
           </Routes>
 
       </BrowserRouter>
-
     </div>
   );
 }

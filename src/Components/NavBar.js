@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 import img_cup from "../images/img_cup.png"
 
 
@@ -13,7 +13,7 @@ function NavbarX() {
   return (
     <Navbar bg="secondary" expand="lg" fixed="top">
       <Container fluid>
-      <Nav.Link href='/'> <img src={img_cup} height="60px" /> </Nav.Link>
+      <Nav.Link href='/'> <img src={img_cup} height="60px" alt='World Cup 2019 Icon'/> </Nav.Link>
          {/* <Navbar.Brand href="/">WWC19</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
