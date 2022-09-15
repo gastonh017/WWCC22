@@ -6,8 +6,8 @@
 }
 
 .compMargin {
-  /* margin-top: 100px;
-  margin-left: 300px; */
+  margin-top: 0px;
+  margin-left: 0px;
   
 }
 
@@ -58,9 +58,9 @@
 }
 
 .margin_card{
-  margin: 5px 2px;
+  margin: 8px 2px;
   padding:5px 10px;
-  border-radius: 3px;
+  border-radius: 3%;
 }
 
 .strong{
@@ -70,4 +70,8 @@
 
 .weak{
   font-size: 0.9rem;
+}
+
+.parrafo-canvas{
+  font-size: 0.8rem;
 }
