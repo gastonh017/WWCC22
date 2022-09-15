@@ -53,12 +53,6 @@
   flex: 70%
 }
 
-<<<<<<< HEAD
- /* diseño del componente teams */
- .groups {
-  list-style: none;
- }
-=======
 .margin_top_sidebar{
   margin-top: 76px;
 }
@@ -81,4 +75,3 @@
 .parrafo-canvas{
   font-size: 0.8rem;
 }
->>>>>>> 89124ed8916a6cfe0305536b3e8ff7331c474ebe
