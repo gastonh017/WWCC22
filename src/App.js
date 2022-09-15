@@ -9,28 +9,25 @@ import Col from 'react-bootstrap/Col';
 import Home from './Components/Home';
 import Teams from './Components/Teams';
 import Games from './Components/Games';
+import Groups from './Components/Groups';
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Row>
+        <div>
           <Navbar />
-        </ Row>
-        
-        <Row className = 'margin_top_sidebar' >
-          <Col lg='2' >
-            <Sidebar />
-          </Col>
-          <Col lg='10' >
-            <Routes>
-              <Route path='/' exact element={<Home  />} />
-              <Route path='/teams'  element={<Teams />} />
-              <Route path='/games'  element={<Games />} />
-            </Routes>
-          </Col>
-        </ Row>
+          <Sidebar />
+        </div>
+         
+          <Routes>
+            <Route path='/' exact element={<Home />} />
+            <Route path='/teams' element={<Teams />} />
+            <Route path='/games' element={<Games/>} />
+            <Route path='/groups' element={<Groups/>} />
+
+          </Routes>
 
       </BrowserRouter>
     </div>
