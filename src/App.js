@@ -16,18 +16,22 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <div>
+        <Row>
           <Navbar />
-          <Sidebar />
-        </div>
-         
-          <Routes>
-            <Route path='/' exact element={<Home />} />
-            <Route path='/teams' element={<Teams />} />
-            <Route path='/games' element={<Games/>} />
-            <Route path='/groups' element={<Groups/>} />
-
-          </Routes>
+        </ Row>
+        
+        <Row className = 'margin_top_sidebar' >
+          <Col lg='2' >
+            <Sidebar />
+          </Col>
+          <Col lg='10' >
+            <Routes>
+              <Route path='/' exact element={<Home  />} />
+              <Route path='/teams'  element={<Teams />} />
+              <Route path='/games'  element={<Games />} />
+            </Routes>
+          </Col>
+        </ Row>
 
       </BrowserRouter>
     </div>
