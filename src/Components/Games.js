@@ -19,7 +19,7 @@ const Cards = (props) => {
     //   'Light', => gris claro
     //   'Dark', => negro
 
-    <Card className="bg-secondary text-dark margin_card text-center" style={{ width: '13rem'}}>
+    <Card className="bg-secondary text-dark margin_card text-center" style={{ width: '14rem'}}>
       <Card.Header className="bg-secondary text-light " >Partido {props.index + props.offset}</Card.Header>
       <ListGroup variant="flush">
         <ListGroup.Item className="bg-secondary text-light strong" >
@@ -33,7 +33,7 @@ const Cards = (props) => {
           Más info ...
         </Button>
 
-        <Offcanvas show={show} onHide={handleClose} placement={'bottom'}>
+        <Offcanvas show={show} onHide={handleClose} placement={'top'}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
               Partido {props.index + props.offset}: {props.home_team_country} Vs. {props.away_team_country}
