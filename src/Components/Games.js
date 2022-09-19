@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 // React-Bootstrap
-import {Card, ListGroup, Button , Offcanvas} from 'react-bootstrap';
+import {Card, ListGroup, Button , Offcanvas, Placeholder} from 'react-bootstrap';
 
 const Cards = (props) => {
     
@@ -19,15 +19,15 @@ const Cards = (props) => {
     //   'Light', => gris claro
     //   'Dark', => negro
 
-    <Card className="bg-secondary text-dark margin_card text-center" style={{ width: '14rem'}}>
-      <Card.Header className="bg-secondary text-light " >Partido {props.index + props.offset}</Card.Header>
+    <Card className="my-bg-card  text-dark margin_card text-center" style={{ width: '14rem'}}>
+      <Card.Header className=" my-bg-card text-light " >Match{props.index + props.offset}</Card.Header>
       <ListGroup variant="flush">
-        <ListGroup.Item className="bg-secondary text-light strong" >
+        <ListGroup.Item className="my-bg-card text-light strong" >
           {props.home_team_code} <strong style={{ fontSize: '2rem'}}>{props.home_team_goals}</strong> - <strong style={{ fontSize: '2rem'}}>{props.away_team_goals}</strong> {props.away_team_code}
         </ListGroup.Item>
         
-        <ListGroup.Item className="bg-secondary text-light weak" >{props.datetime.slice(0,10)}</ListGroup.Item>
-        <ListGroup.Item className="bg-secondary text-light weak" >{props.datetime.slice(11,16)}</ListGroup.Item>
+        <ListGroup.Item className="my-bg-card text-light weak" >{props.datetime.slice(0,10)}</ListGroup.Item>
+        <ListGroup.Item className="my-bg-card text-light weak" >{props.datetime.slice(11,16)}</ListGroup.Item>
         
         <Button variant="primary" onClick={handleShow}>
           Más info ...
@@ -78,31 +78,48 @@ export default function Games() {
     },[])
 
     return (
-    <div className = "container">
+    <div className = "container back-img">
 
         <h1 className='text-center' >WorldCup 2019</h1>
 
         <div className = "row justify-content-evenly">
 
             <h3 className="mt-4 text-center">Fase de grupos</h3>
-            {fase.map((element,index)=>
-              <Cards key = {index}
-                index = {index}
-                offset = {1}
-                home_team_code = {element.home_team.code}
-                away_team_code = {element.away_team.code}
-                datetime = {element.datetime}
-                home_team_country = {element.home_team_country}
-                away_team_country = {element.away_team_country}
-                home_team_goals = {element.home_team.goals}
-                away_team_goals = {element.away_team.goals}
-                city = {element.venue}
-                stadium = {element.location}
-              />
-            )}
+            {
+              fase.length === 0 ?
+                
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+                
+
+              
+                : fase.map((element,index)=>
+                  <Cards key = {index}
+                    index = {index}
+                    offset = {1}
+                    home_team_code = {element.home_team.code}
+                    away_team_code = {element.away_team.code}
+                    datetime = {element.datetime}
+                    home_team_country = {element.home_team_country}
+                    away_team_country = {element.away_team_country}
+                    home_team_goals = {element.home_team.goals}
+                    away_team_goals = {element.away_team.goals}
+                    city = {element.venue}
+                    stadium = {element.location}
+                />)
+            }
 
             <h3 className="mt-4 text-center">Octavos de final</h3>
-            {octavos.map((element,index)=>
+            {fase.length === 0 ?
+                
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                  
+  
+                
+                  :octavos.map((element,index)=>
               <Cards key = {index + 37}
                 index = {index}
                 offset = {37}
@@ -119,7 +136,15 @@ export default function Games() {
             )}
 
             <h3 className="mt-4 text-center">Cuartos de final</h3>
-            {cuartos.map((element,index)=>
+            {fase.length === 0 ?
+                
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                  
+  
+                
+                  :cuartos.map((element,index)=>
               <Cards key = {index + 45}
                 index = {index}
                 offset = {45}
@@ -136,7 +161,15 @@ export default function Games() {
             )}
 
             <h3 className="mt-4 text-center">Semi-finales</h3>
-            {semis.map((element,index)=>
+            {fase.length === 0 ?
+                
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                  
+  
+                
+                  :semis.map((element,index)=>
               <Cards key = {index + 49}
                 index = {index}
                 offset = {49}
@@ -153,7 +186,15 @@ export default function Games() {
             )}
 
             <h3 className="mt-4 text-center">Tercer puesto</h3>
-            {tercero.map((element,index)=>
+            {fase.length === 0 ?
+                
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                  
+  
+                
+                  :tercero.map((element,index)=>
               <Cards key = {index + 51}
                 index = {index}
                 offset = {51}
@@ -170,7 +211,15 @@ export default function Games() {
             )}
 
             <h3 className="mt-4 text-center">Final</h3>
-            {final.map((element,index)=>
+            {fase.length === 0 ?
+                
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                  
+  
+                
+                  :final.map((element,index)=>
               <Cards key = {index + 52}
                 index = {index}
                 offset = {52}

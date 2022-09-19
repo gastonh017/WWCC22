@@ -24,7 +24,7 @@ function App() {
           <Col lg='2' >
             <Sidebar />
           </Col>
-          <Col lg='10' >
+          <Col lg='10' className = 'no-margin' >
             <Routes>
               <Route path='/' exact element={<Home  />} />
               <Route path='/teams'  element={<Teams />} />

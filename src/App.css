@@ -2,13 +2,12 @@
   width: 100vw;
   height: 100vh;
   font-size: large;
-  margin-top: 0px;
+  margin: 0px;
 }
 
 .compMargin {
   margin-top: 0px;
   margin-left: 0px;
-  
 }
 
 
@@ -74,4 +73,19 @@
 
 .parrafo-canvas{
   font-size: 0.8rem;
+}
+
+.back-img{
+  background: no-repeat top/110%  url('../src/images/estadio.jpg') fixed;
+  position: relative;
+  color:aliceblue;
+}
+
+.no-margin{
+  margin-left: -1%;
+
+}
+
+.my-bg-card {
+  background-color: rgba(15, 63, 85, 0.4) !important
 }
