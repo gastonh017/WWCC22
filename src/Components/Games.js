@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 // React-Bootstrap
-import {Card, ListGroup, Button , Offcanvas, Placeholder} from 'react-bootstrap';
+import {Card, ListGroup, Button , Offcanvas} from 'react-bootstrap';
 
 const Cards = (props) => {
     
@@ -33,17 +33,17 @@ const Cards = (props) => {
           Más info ...
         </Button>
 
-        <Offcanvas show={show} onHide={handleClose} placement={'top'}>
+        <Offcanvas show={show} onHide={handleClose} placement={'top'} className="my-bg-offcanvass" >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
-              Partido {props.index + props.offset}: {props.home_team_country} Vs. {props.away_team_country}
+              MATCH {props.index + props.offset}: {props.home_team_country} Vs. {props.away_team_country}
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <h6>Resultado: {props.home_team_code} {props.home_team_goals} - {props.away_team_goals} {props.away_team_code} </h6>
-            <p className='parrafo-canvas'> Fecha : {props.datetime.slice(0,10)} - Hora: {props.datetime.slice(11,16)} Hs. </p>
-            <p className='parrafo-canvas'> Estadio :{props.stadium}</p>
-            <p className='parrafo-canvas'> Ciudad : {props.city}</p>
+            <h6>Result: {props.home_team_code} {props.home_team_goals} - {props.away_team_goals} {props.away_team_code} </h6>
+            <p className='parrafo-canvas'> Date : {props.datetime.slice(0,10)} - Time: {props.datetime.slice(11,16)} Hs. </p>
+            <p className='parrafo-canvas'> Stadium :{props.stadium}</p>
+            <p className='parrafo-canvas'> City : {props.city}</p>
           </Offcanvas.Body>
         </Offcanvas>
 
@@ -80,11 +80,11 @@ export default function Games() {
     return (
     <div className = "container back-img">
 
-        <h1 className='text-center' >WorldCup 2019</h1>
+        <h1 className='my-main-title' >WorldCup 2019</h1>
 
         <div className = "row justify-content-evenly">
 
-            <h3 className="mt-4 text-center">Fase de grupos</h3>
+            <h3 className="mt-4 my-secondary-title">Fase de grupos</h3>
             {
               fase.length === 0 ?
                 
@@ -110,7 +110,7 @@ export default function Games() {
                 />)
             }
 
-            <h3 className="mt-4 text-center">Octavos de final</h3>
+            <h3 className="mt-4 my-secondary-title">Octavos de final</h3>
             {fase.length === 0 ?
                 
                 <div class="spinner-border" role="status">
@@ -135,7 +135,7 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-4 text-center">Cuartos de final</h3>
+            <h3 className="mt-4 my-secondary-title">Cuartos de final</h3>
             {fase.length === 0 ?
                 
                 <div class="spinner-border" role="status">
@@ -160,7 +160,7 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-4 text-center">Semi-finales</h3>
+            <h3 className="mt-4 my-secondary-title">Semi-finales</h3>
             {fase.length === 0 ?
                 
                 <div class="spinner-border" role="status">
@@ -185,7 +185,7 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-4 text-center">Tercer puesto</h3>
+            <h3 className="mt-4 my-secondary-title">Tercer puesto</h3>
             {fase.length === 0 ?
                 
                 <div class="spinner-border" role="status">
@@ -210,7 +210,7 @@ export default function Games() {
               />
             )}
 
-            <h3 className="mt-4 text-center">Final</h3>
+            <h3 className="mt-4 my-secondary-title">Final</h3>
             {fase.length === 0 ?
                 
                 <div class="spinner-border" role="status">

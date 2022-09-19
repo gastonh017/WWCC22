@@ -73,12 +73,18 @@
 
 .parrafo-canvas{
   font-size: 0.8rem;
+  padding: 0%;
+  margin: 0%;
+}
+
+.my-bg-offcanvass{
+  background-color: rgba(224, 236, 253, 0.966) !important;
+  color: rgb(0, 0, 29);
 }
 
 .back-img{
-  background: no-repeat top/110%  url('../src/images/estadio.jpg') fixed;
-  position: relative;
-  color:aliceblue;
+  background: no-repeat top/100%  url('../src/images/estadio.jpg') fixed;
+  color:rgba(224, 236, 253, 1)
 }
 
 .no-margin{
@@ -88,4 +94,16 @@
 
 .my-bg-card {
   background-color: rgba(15, 63, 85, 0.4) !important
+}
+
+.my-main-title {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 10px ;
+}
+
+.my-secondary-title {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 10px ;
 }
