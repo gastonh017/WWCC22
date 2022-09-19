@@ -78,13 +78,13 @@
 }
 
 .my-bg-offcanvass{
-  background-color: rgba(224, 236, 253, 0.966) !important;
+  background-color: rgba(239, 245, 255, 0.966) !important;
   color: rgb(0, 0, 29);
 }
 
 .back-img{
   background: no-repeat top/100%  url('../src/images/estadio.jpg') fixed;
-  color:rgba(224, 236, 253, 1)
+  color:aliceblue;
 }
 
 .no-margin{
@@ -100,10 +100,12 @@
     text-align: center;
     font-size: 4rem;
     padding-top: 10px ;
+    color:rgb(253, 253, 253)
 }
 
 .my-secondary-title {
   text-align: center;
   font-size: 2rem;
   padding-bottom: 10px ;
+  color:rgb(253, 253, 253)
 }
