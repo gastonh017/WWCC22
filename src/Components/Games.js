@@ -29,7 +29,7 @@ export default function Games() {
   return (
     <div className = "container back-img">
 
-      <h1 className='my-main-title' >WorldCup 2019</h1>
+      <h1 className='my-main-title' >Womens World Cup 2019</h1>
 
       <div className = "row justify-content-evenly">
 

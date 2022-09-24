@@ -83,7 +83,7 @@
 }
 
 .back-img{
-  background: no-repeat top/100%  url('../src/images/estadio.jpg') fixed;
+  background: no-repeat url('../src/images/estadio.jpg') top/100%   fixed;
   color:aliceblue;
 }
 
@@ -108,4 +108,9 @@
   font-size: 2rem;
   padding-bottom: 10px ;
   color:rgb(253, 253, 253)
+}
+
+.back-img-portada{
+  background: no-repeat url('../src/images/Portada.jpg') top/100%;
+  color:aliceblue;
 }

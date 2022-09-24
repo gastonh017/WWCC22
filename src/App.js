@@ -9,7 +9,9 @@ import Col from 'react-bootstrap/Col';
 import Home from './Components/Home';
 import Teams from './Components/Teams';
 import Games from './Components/Games';
-import Groups from './Components/Groups';
+import Stadiums from './Components/Stadiums'
+// import Groups from './Components/Groups';
+
 
 
 function App() {
@@ -26,9 +28,10 @@ function App() {
           </Col>
           <Col lg='10' className = 'no-margin' >
             <Routes>
-              <Route path='/' exact element={<Home  />} />
-              <Route path='/teams'  element={<Teams />} />
-              <Route path='/games'  element={<Games />} />
+              <Route path='/' exact  element={<Home />}     />
+              <Route path='/teams'   element={<Teams />}    />
+              <Route path='/games'   element={<Games />}    />
+              <Route path='/stadiums'element={<Stadiums />} />
             </Routes>
           </Col>
         </ Row>
