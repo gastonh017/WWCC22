@@ -29,6 +29,7 @@ function App() {
               <Route path='/' exact element={<Home  />} />
               <Route path='/teams'  element={<Teams />} />
               <Route path='/games'  element={<Games />} />
+              <Route path='/groups'  element={<Groups />} />
             </Routes>
           </Col>
         </ Row>

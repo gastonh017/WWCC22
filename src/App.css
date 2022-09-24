@@ -75,3 +75,37 @@
 .parrafo-canvas{
   font-size: 0.8rem;
 }
+
+.contenedor-paises {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.boton-paises {
+  background-color: #6c757d;
+  max-width: 50%;
+  margin: 4%;
+  height: 70px;
+  width: 100px;
+  border-radius: 25px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-paises {
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.boton-paises:hover {
+  background-color: black;
+  border: 2px solid white;
+}
