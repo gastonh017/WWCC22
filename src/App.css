@@ -114,3 +114,19 @@
   background: no-repeat url('../src/images/Portada.jpg') top/100%;
   color:aliceblue;
 }
+
+.main-title{
+  padding-top: 20px;
+}
+
+.title-stadims{
+ font-size: 1.6rem;
+ font-weight: bold;
+ padding-top: 10px;
+ color: rgba(0, 50, 255, 0.9)
+}
+
+.description-stadims{
+  font-size: 1.3rem;
+  padding-top: 10px;
+}

@@ -13,7 +13,7 @@ function NavbarX() {
   return (
     <Navbar bg="secondary" expand="lg" fixed="top">
       <Container fluid>
-      <Nav.Link href='/'> <img src={img_cup} height="60px" alt='World Cup 2019 Icon'/> </Nav.Link>
+      <Nav.Link href='/'> <img src={img_cup} height="60px" alt='World Cup 2019 Icon' /> </Nav.Link>
          {/* <Navbar.Brand href="/">WWC19</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
