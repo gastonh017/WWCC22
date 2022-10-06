@@ -16,6 +16,11 @@ export const SidebarData = [
     link: "/games"
 },
 {
+    title: "Details",
+    icon: <Diversity3OutlinedIcon />,
+    link: "/games/details"
+},
+{
     title: "Stadiums",
     icon: <StadiumOutlinedIcon />,
     link: "/stadiums"

@@ -9,12 +9,18 @@ import Col from 'react-bootstrap/Col';
 import Home from './Components/Home';
 import Teams from './Components/Teams';
 import Games from './Components/Games';
+import GamesDetails from './Components/GamesDetails'
 import Stadiums from './Components/Stadiums'
-// import Groups from './Components/Groups';
-
+import CarouselMatches from './Components/carouselMatches'
+import useFetchMatches from "./Components/CustomHooks/useFetchMatches";
 
 
 function App() {
+
+  const {matches} = useFetchMatches('https://worldcup.sfg.io/matches');
+  
+
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -28,10 +34,12 @@ function App() {
           </Col>
           <Col lg='10' className = 'no-margin' >
             <Routes>
-              <Route path='/' exact  element={<Home />}     />
-              <Route path='/teams'   element={<Teams />}    />
-              <Route path='/games'   element={<Games />}    />
-              <Route path='/stadiums'element={<Stadiums />} />
+              <Route path='/'             element={<Home />}  exact />
+              <Route path='/teams'        element={<Teams />}       />
+              <Route path='/games'        element={<Games matches = {matches}/>} exact  />
+              <Route path='/games/:id'    element={<GamesDetails matches = {matches} />} />
+              <Route path='/games/details'element={<CarouselMatches />} />
+              <Route path='/stadiums'     element={<Stadiums />}    />
             </Routes>
           </Col>
         </ Row>

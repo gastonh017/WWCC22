@@ -2,11 +2,10 @@ import React, {useState} from "react";
 import {Card, ListGroup, Button , Offcanvas} from 'react-bootstrap';
 
 export default function Cards (props) {
-    
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
     return(
       // 'primary', => Azul
       // 'secondary', => gris oscuro
@@ -16,7 +15,7 @@ export default function Cards (props) {
       //   'Info', => celeste
       //   'Light', => gris claro
       //   'Dark', => negro
-  
+    <>
       <Card className="my-bg-card  text-dark margin_card text-center" style={{ width: '14rem'}}>
         <Card.Header className=" my-bg-card text-light " >Match {props.index + props.offset}</Card.Header>
         <ListGroup variant="flush">
@@ -25,11 +24,18 @@ export default function Cards (props) {
           </ListGroup.Item>
           
           <ListGroup.Item className="my-bg-card text-light weak" >{props.datetime.slice(0,10)}</ListGroup.Item>
-          <ListGroup.Item className="my-bg-card text-light weak" >{props.datetime.slice(11,16)}</ListGroup.Item>
+          <ListGroup.Item className="my-bg-card text-light weak" >{props.datetime.slice(11,16)} hs.</ListGroup.Item>
           
-          <Button variant="primary" onClick={handleShow}>
-            More information ...
-          </Button>
+          <ListGroup.Item className="my-bg-card text-light weak" >
+            <Button variant="primary" onClick={handleShow} className="my-bg-card text-light weak">
+              Details ...
+            </Button>
+          </ListGroup.Item>
+          <ListGroup.Item className="my-bg-card text-light weak" >
+            <Button href={`/games/${props.index + props.offset}`} >
+              More information ...
+            </Button>
+          </ListGroup.Item>
   
           <Offcanvas show={show} onHide={handleClose} placement={'top'} className="my-bg-offcanvass" >
             <Offcanvas.Header closeButton>
@@ -49,5 +55,6 @@ export default function Cards (props) {
         </ListGroup>
   
       </Card>
+    </>
     )
   }

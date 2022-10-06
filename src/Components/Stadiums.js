@@ -28,22 +28,25 @@ const Stadiums = () => {
       })
       .catch(error => console.log(error));
     },[])
-  
+  console.log(stadiums);
   return (
-    <div className="container">
-      <h2 className="main-title">All the Stadiums</h2>
+    <div className = "container back-img">
+      <h1 className='my-main-title' > All the Stadiums</h1>
       <hr />
-      {
-        stadiums.length === 0 ? 
-          <Loading /> 
-        :
-          stadiums.map((stadium,index) =>  
-            <Stadium key = {index}
-              stadium = {stadium} 
-              index = {index}
-              gamesPlayed = {matches[index].cantidad}
-            />
-      )}
+      <div className = "row justify-content-evenly">
+
+        {
+          stadiums.length === 0 ? 
+            <Loading /> 
+          :
+            stadiums.map((stadium,index) =>  
+              <Stadium key = {index}
+                stadium = {stadium} 
+                index = {index}
+                gamesPlayed = {matches[index].cantidad}
+              />
+        )}
+      </div>
     </div>
   )
 }

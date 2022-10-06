@@ -93,7 +93,8 @@
 }
 
 .my-bg-card {
-  background-color: rgba(15, 63, 85, 0.4) !important
+  background-color: rgba(15, 63, 85, 0.4) !important;
+  width: 100%;
 }
 
 .my-main-title {
@@ -129,4 +130,57 @@
 .description-stadims{
   font-size: 1.3rem;
   padding-top: 10px;
+}
+
+.carrusel{
+  background-color: #181d22;
+  height: 84vh;
+  padding-top: 5px;
+  color:rgb(253, 253, 253)
+}
+
+/*CARDS PARA JUGADORES*/
+.my-container{
+  background-color: rgba(15, 63, 85, 0.4) !important;
+  width: 100%;
+  border-radius: 8px;
+  padding:5px 10px;
+}
+
+.my-background-color{
+  background-color: rgba(15, 63, 85, 0.8) !important;
+  width: 100%;
+  border-radius: 8px;
+  padding:5px 10px;
+  text-align: center;
+}
+
+.my-title-card,
+.my-buttom-card,
+.my-subtitle-card{
+  background-color: rgba(15, 63, 85, 0.8);
+  text-align: center;
+  font-size: 0.9rem;
+  color:rgba(253, 253, 253,0.9);
+  padding:1px;
+  margin-bottom: 1px;
+}
+
+.my-title-card{
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.my-buttom-card{
+  border-bottom-right-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+
+.widthoutpadd-r{
+  padding-right:1px;
+}
+.widthoutpadd-l{
+  padding-left:1px;
 }
