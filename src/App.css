@@ -97,6 +97,12 @@
   width: 100%;
 }
 
+.my-btm-information {
+  background-color: rgb(0, 117, 172) !important;
+  border: 1px solid  rgb(117, 211, 255);
+  width: 100%;
+}
+
 .my-main-title {
     text-align: center;
     font-size: 4rem;
@@ -108,7 +114,8 @@
   text-align: center;
   font-size: 2rem;
   padding-bottom: 10px ;
-  color:rgb(253, 253, 253)
+  color:rgb(253, 253, 253);
+  margin-top: 10px !important;
 }
 
 .back-img-portada{
@@ -118,6 +125,10 @@
 
 .main-title{
   padding-top: 20px;
+}
+
+.style-icon{
+  padding-right: 15px;
 }
 
 .title-stadims{
@@ -183,4 +194,11 @@
 }
 .widthoutpadd-l{
   padding-left:1px;
+}
+
+.GD-Row{
+  margin-bottom: 2.5%;
+}
+.referees-style{
+  font-size: 0.9rem;
 }

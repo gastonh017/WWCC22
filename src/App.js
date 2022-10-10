@@ -19,8 +19,6 @@ function App() {
 
   const {matches} = useFetchMatches('https://worldcup.sfg.io/matches');
   
-
-
   return (
     <div className="App">
       <BrowserRouter>

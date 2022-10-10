@@ -9,12 +9,12 @@ export default function Cards (props) {
     return(
       // 'primary', => Azul
       // 'secondary', => gris oscuro
-      //   'Success', => verde
-      //   'Danger', => rojo
-      //   'Warning', => amarillo
-      //   'Info', => celeste
-      //   'Light', => gris claro
-      //   'Dark', => negro
+      // 'Success', => verde
+      // 'Danger', => rojo
+      // 'Warning', => amarillo
+      // 'Info', => celeste
+      // 'Light', => gris claro
+      // 'Dark', => negro
     <>
       <Card className="my-bg-card  text-dark margin_card text-center" style={{ width: '14rem'}}>
         <Card.Header className=" my-bg-card text-light " >Match {props.index + props.offset}</Card.Header>
@@ -28,12 +28,12 @@ export default function Cards (props) {
           
           <ListGroup.Item className="my-bg-card text-light weak" >
             <Button variant="primary" onClick={handleShow} className="my-bg-card text-light weak">
-              Details ...
+              Details
             </Button>
           </ListGroup.Item>
           <ListGroup.Item className="my-bg-card text-light weak" >
-            <Button href={`/games/${props.index + props.offset}`} >
-              More information ...
+            <Button href={`/games/${props.index + props.offset}`} className="my-btm-information text-light weak">
+              More information
             </Button>
           </ListGroup.Item>
   
