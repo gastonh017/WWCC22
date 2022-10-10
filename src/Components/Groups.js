@@ -22,7 +22,7 @@ import {useState, useEffect} from "react"
             setGroup5(data.filter(team => team.group_id === 5 ))
             setGroup6(data.filter(team => team.group_id === 6 ))
           
-            console.log(data)
+            //console.log(data)
         })
         .catch(err => console.log(err))
     },[])

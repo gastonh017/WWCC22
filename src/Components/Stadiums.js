@@ -28,7 +28,6 @@ const Stadiums = () => {
       })
       .catch(error => console.log(error));
     },[])
-  console.log(stadiums);
   return (
     <div className = "container back-img">
       <h1 className='my-main-title' > All the Stadiums</h1>

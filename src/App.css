@@ -128,7 +128,8 @@
 }
 
 .style-icon{
-  padding-right: 15px;
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
 
 .title-stadims{
@@ -201,4 +202,6 @@
 }
 .referees-style{
   font-size: 0.9rem;
+  margin: 0.2rem;
+
 }

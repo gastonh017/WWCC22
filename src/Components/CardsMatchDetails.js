@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, ListGroup,Row ,Col} from 'react-bootstrap';
+import {Row ,Col} from 'react-bootstrap';
 
 export default function CardsMatchDetails ({title, teamCountry, team}) {
   
@@ -27,8 +27,8 @@ export default function CardsMatchDetails ({title, teamCountry, team}) {
             <div className="my-subtitle-card" >#</div>
           </Col>
         </Row>
-        { team.map((player,i) => 
-          <Row>
+        { team.map((player,i) =>
+          <Row key={i}>
             <Col lg='8' className='widthoutpadd-r'>
               <div className="my-subtitle-card" >{player.name}</div>
             </Col>

@@ -35,7 +35,7 @@ function App() {
               <Route path='/'             element={<Home />}  exact />
               <Route path='/teams'        element={<Teams />}       />
               <Route path='/games'        element={<Games matches = {matches}/>} exact  />
-              <Route path='/games/:id'    element={<GamesDetails matches = {matches} />} />
+              <Route path='/games/:id'    element={<GamesDetails matches = {matches} />}/>
               <Route path='/games/details'element={<CarouselMatches />} />
               <Route path='/stadiums'     element={<Stadiums />}    />
             </Routes>
