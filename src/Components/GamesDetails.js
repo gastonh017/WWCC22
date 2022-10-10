@@ -50,14 +50,14 @@ export default function GamesDetails({matches}) {
       <Row>
         <h3 className="mt-4 my-secondary-title">Otros datos</h3>
         <Row>
-          <Col lg='6'>
+          <Col lg='5'>
             <CardsMatchDetails 
               title = "Starting eleven"
               teamCountry = {match.home_team_statistics.country}
               team = {match.home_team_statistics.starting_eleven} 
             />
           </Col>
-          <Col lg='6'>
+          <Col lg='7'>
             <CardsMatchDetails 
               title = "Starting eleven"
               teamCountry = {match.away_team_statistics.country}

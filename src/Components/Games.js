@@ -3,10 +3,8 @@ import Loading from './Loading';
 import Instance from './Instance'
 import DataMatchesFilter from './DataMatchesFilter'
 
-
-
-
 export default function Games({matches}) {
+  
   const {fase, octavos, cuartos,semis,tercero,final,loadingData} = DataMatchesFilter(matches)
 
   
