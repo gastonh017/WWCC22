@@ -82,12 +82,12 @@
 
 }
 .boton-paises {
-  background-color: #6c757d;
+  background-color: #047235;
   max-width: 50%;
-  margin: 4%;
-  height: 70px;
-  width: 100px;
-  border-radius: 25px;
+  margin: 5%;
+  height: 75x;
+  width: 150px;
+  border-radius: 15px;
   border: 2px solid white;
   display: flex;
   align-items: center;
@@ -108,4 +108,14 @@
 .boton-paises:hover {
   background-color: black;
   border: 2px solid white;
+}
+
+.img-btn {
+  margin: 5%;
+  width: 40px;
+  height: 30px;
+  padding-left: 5px;
+  
+  
+  
 }
