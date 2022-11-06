@@ -1,0 +1,4 @@
+https://worldcup.sfg.io/matches  ==> matches.json
+https://worldcup.sfg.io/teams/results ==> results.json
+https://worldcup.sfg.io/teams/group_results ==> group_results.json
+https://worldcup.sfg.io/teams/ ==> worldcup.sfg.io.json
