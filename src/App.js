@@ -11,13 +11,15 @@ import Teams from './Components/Teams';
 import Games from './Components/Games';
 import GamesDetails from './Components/GamesDetails'
 import Stadiums from './Components/Stadiums'
+import Groups from './Components/Groups'
 import CarouselMatches from './Components/carouselMatches'
 import useFetchMatches from "./Components/CustomHooks/useFetchMatches";
 
 
+
 function App() {
 
-  const {matches} = useFetchMatches('https://worldcup.sfg.io/matches');
+  const {matches} = useFetchMatches('http://localhost:3000/matches');
   
 
 
@@ -40,6 +42,7 @@ function App() {
               <Route path='/games/:id'    element={<GamesDetails matches = {matches} />} />
               <Route path='/games/details'element={<CarouselMatches />} />
               <Route path='/stadiums'     element={<Stadiums />}    />
+              <Route path='/groups'     element={<Groups />}    />
             </Routes>
           </Col>
         </ Row>

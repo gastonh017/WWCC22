@@ -7,7 +7,7 @@ const Stadiums = () => {
   const [matches, setMatches] = useState([]);
 
   useEffect(() => {
-      fetch('https://worldcup.sfg.io/matches')
+      fetch('http://localhost:3000/matches')
       .then(response => response.json())
       .then(data => {
         let datos = data.map((estadio) => (estadio.location));

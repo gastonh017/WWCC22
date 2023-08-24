@@ -41,7 +41,7 @@ const TeamCard = (props) => {
 						<Card.Body>
 							<ListGroup variant="flush" className="row justify-content-evenly">
 								<ListGroup.Item className="bg-success text-light " > Grupo: {props.group_letter} </ListGroup.Item>
-                <ListGroup.Item className="bg-success text-light " > PJ: {props.games_played} </ListGroup.Item>
+                <ListGroup.Item className="bg-success text-light " > Partidos Jugados: {props.games_played} </ListGroup.Item>
 								<ListGroup.Item className="bg-success text-light " > Ganados: {props.wins}</ListGroup.Item>
 								<ListGroup.Item className="bg-success text-light " > Empatados: {props.draws}</ListGroup.Item>
 								<ListGroup.Item className="bg-success text-light " > Perdidos: {props.losses}</ListGroup.Item>
@@ -63,11 +63,14 @@ const TeamCard = (props) => {
   
 
     useEffect (()=>{
-        fetch("https://worldcup.sfg.io/teams/results")
+        fetch("http://localhost:3000/group_results")
         .then(res => res.json())
         .then(data =>{
-            setTeams(data)
-            console.log(data)
+          const equiposA = data[0].ordered_teams
+          const equiposB = data[1].ordered_teams
+            setTeams([...data[0].ordered_teams, ...data[1].ordered_teams, ...data[2].ordered_teams, ...data[3].ordered_teams, ...data[4].ordered_teams, ...data[5].ordered_teams])
+            console.log(equipos)
+            console.log(data[1].ordered_teams)
         })
         .catch(err => console.log(err))
     },[])
@@ -80,7 +83,7 @@ const TeamCard = (props) => {
          fifa_code={team.fifa_code}
          name={team.country}
          group_letter={team.group_letter}
-         PJ={team.games_played}
+         games_played = {team.games_played}
          wins= {team.wins} 
          draws= {team.draws}
          losses = {team.losses}
