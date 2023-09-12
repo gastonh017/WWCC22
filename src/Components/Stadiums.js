@@ -28,10 +28,10 @@ const Stadiums = () => {
       })
       .catch(error => console.log(error));
     },[])
-  console.log(stadiums);
+  //console.log(stadiums);
   return (
     <div className = "container back-img">
-      <h1 className='my-main-title' > All the Stadiums</h1>
+      <h1 className='my-main-title' > Todos los Estadios</h1>
       <hr />
       <div className = "row justify-content-evenly">
 

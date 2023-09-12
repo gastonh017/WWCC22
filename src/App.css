@@ -83,25 +83,19 @@
 }
 
 .back-img{
-  background: no-repeat url('../src/images/estadio.jpg') top/100%   fixed;
-  color:aliceblue;
+  background: url('../src/images/estadio.jpg') center top/100%  no-repeat  fixed padding-box content-box;
+  color:rgb(21, 120, 206);
+  min-height: 100vh;
 }
 
 .no-margin{
-  margin-left: -1%;
+  margin-left: -2%;
 
 }
 
 .my-bg-card {
   background-color: rgba(15, 63, 85, 0.4) !important;
   width: 100%;
-}
-
-.my-main-title {
-    text-align: center;
-    font-size: 4rem;
-    padding-top: 10px ;
-    color:rgb(253, 253, 253)
 }
 
 .my-secondary-title {

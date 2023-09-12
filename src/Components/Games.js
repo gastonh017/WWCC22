@@ -9,7 +9,7 @@ export default function Games({matches}) {
 
   
   return (
-    <div className = "container back-img">
+    <div className = "back-img">
 
       <h1 className='my-main-title' >Women's World Cup France 2019</h1>
 
@@ -18,31 +18,31 @@ export default function Games({matches}) {
         { loadingData ?  <Loading /> : 
           <>
             <Instance
-              title = 'First Stage'
+              title = 'Fase de grupo'
               matches = {fase}
               offset = {1}
             />
 
             <Instance
-              title = 'Round of 16'
+              title = 'Octavos de final'
               matches = {octavos}
               offset = {37}
             />
 
             <Instance
-              title = 'Quarter-final'
+              title = 'Cuartos de final'
               matches = {cuartos}
               offset = {45}
             />
 
             <Instance
-              title = 'Semi-final'
+              title = 'Semifinal'
               matches = {semis}
               offset = {49}
             />
 
             <Instance
-              title = 'Third place'
+              title = 'Tercer puesto'
               matches = {tercero}
               offset = {51}
             />
