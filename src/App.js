@@ -1,10 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from "./Components/NavBar"
-import Sidebar from './Components/Sidebar';
+
 // React-Bootstrap
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import Home from './Components/Home';
 import Teams from './Components/Teams';
@@ -14,6 +12,9 @@ import Stadiums from './Components/Stadiums'
 import Groups from './Components/Groups'
 import CarouselMatches from './Components/carouselMatches'
 import useFetchMatches from "./Components/CustomHooks/useFetchMatches";
+
+import NavBar2 from "./Components/NavBar/NavBar";
+import MainHome from "./Components/MainHome/MainHome"
 
 
 
@@ -27,25 +28,20 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Row>
-          <Navbar />
+          <NavBar2 />
         </ Row>
-        
-        <Row className = 'margin_top_sidebar' >
-          {/* <Col lg='2' >
-            <Sidebar />
-          </Col> */}
-          <Col lg='10' className = 'no-margin' >
+        <Row>
             <Routes>
-              <Route path='/'             element={<Home />}  exact />
+              <Route path='/'             element={<MainHome />}  exact/>
               <Route path='/teams'        element={<Teams />}       />
               <Route path='/games'        element={<Games matches = {matches}/>} exact  />
               <Route path='/games/:id'    element={<GamesDetails matches = {matches} />} />
               <Route path='/games/details'element={<CarouselMatches />} />
               <Route path='/stadiums'     element={<Stadiums />}    />
-              <Route path='/groups'     element={<Groups />}    />
+              <Route path='/groups'       element={<Groups />}    />
             </Routes>
-          </Col>
         </ Row>
+
 
       </BrowserRouter>
     </div>

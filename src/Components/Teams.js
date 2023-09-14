@@ -66,10 +66,10 @@ const TeamCard = (props) => {
         fetch("http://localhost:3000/teams_results")
         .then(res => res.json())
         .then(data =>{
-          const equiposA = data[0].ordered_teams
-          const equiposB = data[1].ordered_teams
+          // const equiposA = data[0].ordered_teams
+          // const equiposB = data[1].ordered_teams
             setTeams([...data[0].ordered_teams, ...data[1].ordered_teams, ...data[2].ordered_teams, ...data[3].ordered_teams, ...data[4].ordered_teams, ...data[5].ordered_teams])
-            console.log(equipos)
+            // console.log(equipos)
             console.log(data[1].ordered_teams)
         })
         .catch(err => console.log(err))

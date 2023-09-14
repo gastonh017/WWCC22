@@ -27,7 +27,7 @@ export default function GamesDetails({matches}) {
 
       <Row>
         <h3 className="mt-4 my-secondary-title">Datos importantes</h3> 
-          <Col lg='2' />
+          <Col lg='2'/>
           <Col lg='8' >
           <div className='my-container'>
             <div className='my-background-color'>

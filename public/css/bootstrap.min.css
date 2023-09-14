@@ -207,23 +207,14 @@ address {
     line-height: inherit
 }
 
-ol,
-ul {
+ol{
     padding-left: 2rem
 }
 
 dl,
-ol,
-ul {
+ol{
     margin-top: 0;
     margin-bottom: 1rem
-}
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-    margin-bottom: 0
 }
 
 dt {
@@ -674,7 +665,7 @@ progress {
 .container-sm,
 .container-xl,
 .container-xxl {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x:  1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
