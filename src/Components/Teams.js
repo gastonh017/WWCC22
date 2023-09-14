@@ -63,7 +63,7 @@ const TeamCard = (props) => {
   
 
     useEffect (()=>{
-        fetch("http://localhost:3000/group_results")
+        fetch("http://localhost:3000/teams_results")
         .then(res => res.json())
         .then(data =>{
           const equiposA = data[0].ordered_teams

@@ -31,9 +31,9 @@ function App() {
         </ Row>
         
         <Row className = 'margin_top_sidebar' >
-          <Col lg='2' >
+          {/* <Col lg='2' >
             <Sidebar />
-          </Col>
+          </Col> */}
           <Col lg='10' className = 'no-margin' >
             <Routes>
               <Route path='/'             element={<Home />}  exact />

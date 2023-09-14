@@ -24,7 +24,7 @@ function NavbarX() {
           >
             {/* <Nav.Link href="/">Home</Nav.Link> */}
             <NavDropdown title="Groups" id="navbarScrollingDropdown" className='mx-auto'>
-              <NavDropdown.Item href="/action3">Group A</NavDropdown.Item>
+              <NavDropdown.Item href="/groups">Group A</NavDropdown.Item>
               <NavDropdown.Item href="/action3">Group B</NavDropdown.Item>
               <NavDropdown.Item href="/action3">Group C</NavDropdown.Item>
               <NavDropdown.Item href="/action3">Group D</NavDropdown.Item>
