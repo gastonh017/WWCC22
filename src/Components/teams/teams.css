@@ -1,0 +1,51 @@
+:root{
+   
+    --azul-oscuro-bkg: #242380;
+    --azul-oscuro-bkg-2: #1e0063;
+    --azul-oscuro: #18014d;
+    --celeste: #00b3ee;
+    --rojo: #da010c;
+    --amarillo: #fae100;
+    --dorado: #f1a100;
+    --blanco: #fcffff;
+    --gris-01: #e1e2ec;
+    --gris-02: #c5d0e6;
+     --gris-03: #bac3e0;
+    }
+  
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(90deg, var(--azul-oscuro) 10%, var(--azul-oscuro-bkg)20%, var(--azul-oscuro) 50%, var(--azul-oscuro-bkg)80%, var(--azul-oscuro) 90%);
+      margin: 0%;
+      /* background-color: var(--gris-01); */
+    }
+.contenedor-paises {
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.contenedor-teams {
+    padding: 3%;
+    width: 17%;
+}
+
+.img-banner {
+  margin-bottom: 3%;
+  width: 90px;
+  height: 60px;
+  border: 1px solid var(--dorado);
+  border-radius: 5px;
+
+}
+
+.img-banner:hover {
+    cursor: pointer;
+}
+
+.banner-equipos {
+    width: 100%;
+}
+
+.texto-teams {
+    font-size: 1em;
+}

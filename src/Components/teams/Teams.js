@@ -2,8 +2,9 @@ import React from 'react'
 import {useState, useEffect} from "react"
 import Button from 'react-bootstrap/Button';
 import { Offcanvas, Card, ListGroup } from 'react-bootstrap';
-import "../App.css"
-import {FlagsData} from "./FlagsData"
+import {FlagsData} from "../FlagsData"
+import banner from './banner equipos3.png'
+import './teams.css'
 
 const findFlag = ( str ) => {
   for(let i = 0; i < FlagsData.length; i++ ) {
@@ -24,29 +25,34 @@ const TeamCard = (props) => {
 
 	return (
 		<>
-      <Button
+    <div className='contenedor-teams'>
+     <img src={findFlag(props.fifa_code)} className="img-banner" alt="bandera" onClick={handleShow}/>
+      <p className='texto-teams'>{props.name}</p>
+      <p className='texto-teams'>{props.fifa_code} </p>
+    </div>
+      {/* <Button
           className='boton-paises' 
           onClick={handleShow}
           type="submit"> {props.name}
-          <img src={findFlag(props.fifa_code)} className="img-btn" alt="bandera"/>
-      </Button>
+          <img src={findFlag(props.fifa_code)} className="img-btn" alt="bandera" onClick={handleShow}/>
+      </Button> */}
 			<Offcanvas show={show} onHide={handleClose} placement={"end"} >
 				<Offcanvas.Header closeButton>
-					<Offcanvas.Title className="text-success strong"> {props.name} </Offcanvas.Title>
+					<Offcanvas.Title className="text-primary strong"> {props.name} </Offcanvas.Title>
           
 				</Offcanvas.Header>
 				<Offcanvas.Body>
-					<Card bg="light" className="col-lg-8 mb-4">
+					<Card bg="primary" className="col-lg-6 mb-4">
 						
 						<Card.Body>
 							<ListGroup variant="flush" className="row justify-content-evenly">
-								<ListGroup.Item className="bg-success text-light " > Grupo: {props.group_letter} </ListGroup.Item>
-                <ListGroup.Item className="bg-success text-light " > Partidos Jugados: {props.games_played} </ListGroup.Item>
-								<ListGroup.Item className="bg-success text-light " > Ganados: {props.wins}</ListGroup.Item>
-								<ListGroup.Item className="bg-success text-light " > Empatados: {props.draws}</ListGroup.Item>
-								<ListGroup.Item className="bg-success text-light " > Perdidos: {props.losses}</ListGroup.Item>
-								<ListGroup.Item className="bg-success text-light " > Goles a Favor: {props.goals_for}</ListGroup.Item>
-								<ListGroup.Item className="bg-success text-light " > Goles en Contra: {props.goals_against}</ListGroup.Item>
+								<ListGroup.Item className="bg-primary text-light " > Grupo: {props.group_letter} </ListGroup.Item>
+                <ListGroup.Item className="bg-primary text-light " > Partidos Jugados: {props.games_played} </ListGroup.Item>
+								<ListGroup.Item className="bg-primary text-light " > Ganados: {props.wins}</ListGroup.Item>
+								<ListGroup.Item className="bg-primary text-light " > Empatados: {props.draws}</ListGroup.Item>
+								<ListGroup.Item className="bg-primary text-light " > Perdidos: {props.losses}</ListGroup.Item>
+								<ListGroup.Item className="bg-primary text-light " > Goles a Favor: {props.goals_for}</ListGroup.Item>
+								<ListGroup.Item className="bg-primary text-light " > Goles en Contra: {props.goals_against}</ListGroup.Item>
 							</ListGroup>
 						</Card.Body>
 					</Card>
@@ -76,6 +82,8 @@ const TeamCard = (props) => {
     },[])
 
   return (
+    <>
+    <img src={banner} className="banner-equipos" alt="banner"/>
     <div  className = "contenedor-paises">
        {teams.map((team, i) =>
          <TeamCard 
@@ -94,6 +102,7 @@ const TeamCard = (props) => {
          )
         } 
     </div>
+    </>
   )
 }
 

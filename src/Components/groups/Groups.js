@@ -1,10 +1,11 @@
 import React from "react";
 import Spinner from "react-bootstrap/Spinner";
-import TablaGrupos from "./TablaGrupos";
-import "../assets/groups.css";
+import TablaGrupos from "../TablaGrupos";
+import "./groups.css";
+import banner from './banner-grupos2.png'
 
 import { useState, useEffect } from "react";
-import { FlagsData } from "./FlagsData";
+import { FlagsData } from "../FlagsData";
 
 const findFlag = (str) => {
   for (let i = 0; i < FlagsData.length; i++) {
@@ -48,6 +49,8 @@ function Groups() {
       .catch((err) => console.log(err));
   }, []);
   return (
+    <>
+     <img src={banner} className="" alt="banner"></img>
     <div className="contenedor-tablas">
       <div className="clase-grupo">
         <p> Grupo A</p>
@@ -308,6 +311,7 @@ function Groups() {
       </table>
       </div>
     </div>
+    </>
   );
 }
 export default Groups;
