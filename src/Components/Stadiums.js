@@ -30,7 +30,7 @@ const Stadiums = () => {
     },[])
   //console.log(stadiums);
   return (
-    <div className = "container back-img">
+    <div className = "back-img">
       <h1 className='my-main-title' > Todos los Estadios</h1>
       <hr />
       <div className = "row justify-content-evenly">
