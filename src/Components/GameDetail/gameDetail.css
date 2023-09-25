@@ -220,7 +220,6 @@ li.page-detail {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .data{
@@ -289,6 +288,14 @@ h5.title-team{
   width: 50px;
   height: auto;
   margin: 0 1rem;
+  }
+
+
+  /* informacion detallada*/
+  /* Nav de las solapas */
+  .info-detail > article{
+    width: 80%;
+    margin: 0 10%;
   }
 
   .secondary-nav-links > ul{

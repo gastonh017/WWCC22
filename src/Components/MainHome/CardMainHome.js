@@ -12,9 +12,7 @@ export default function CardMainHome(props) {
       <article className="container">
         <div className="card">
           <div id={props.id} className="front"></div>
-
             <a href={props.link} className="back">Clickeá para ver</a>
-
         </div>
       </article>
     </section>

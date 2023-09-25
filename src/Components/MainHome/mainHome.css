@@ -1,5 +1,6 @@
+/* CAda una de las secciones */
 .secciones {
-  padding-bottom: 2rem;
+  padding: 2rem;
   background-color: var(--azul-oscuro);
   color: var(--gris-01);
   min-height: 70vh;
@@ -14,6 +15,8 @@
   color: var(--azul-oscuro);
 }
 
+/* Texto de cada seccion */
+
 .text-secciones {
   text-align: center;
   width: 90%;
@@ -21,17 +24,18 @@
 }
 
 .text-secciones > .text-title {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .text-secciones>.text-description {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: italic;
 }
 
 .container {
-  width: 60%;
+  width: 90%;
   height: 200px;
 }
 
@@ -98,6 +102,7 @@ a.back {
   color: var(--gris-03)
 }
 
+/* imagenes de las cards */
 #img01 {
   background-image: url("./images/01.jpg");
   background-size: cover;
@@ -122,6 +127,7 @@ a.back {
 
 @media (min-width: 768px) {
   .secciones {
+    min-height: 60vh;
     padding: 1rem 0;
     flex-flow: row nowrap;
   }
@@ -131,24 +137,47 @@ a.back {
   }
 
   .text-secciones {
+    max-width: 30%;
+    margin: 0 5%;
+    text-align: start;
+  }
+
+  .text-secciones > .text-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-secciones>.text-description {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    max-width: 40%;
+  }
+
+
+  .secciones:nth-child(even) > .container {
+    margin-right: 10%;
+  }
+  .secciones:nth-child(odd) > .container {
+    margin-left: 10%;
+  }
+
+  .card {
+    height: 17vw;
+    width: 25vw;
+  }
+}
+
+@media (min-width: 992px) {
+  
+  .text-secciones {
     width: 55%;
     margin: 0 10%;
     text-align: start;
   }
 
-  .text-secciones > .text-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
+}
+@media (min-width: 1200px) {
 
-  .container {
-    width: 80%;
-    height: 300px;
-    margin-left: 100px;
-  }
-
-
-  .container:nth-child(even) {
-    margin-right: 100px;
-  }
 }
