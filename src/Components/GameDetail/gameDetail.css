@@ -1,0 +1,391 @@
+/* Estilos generales */
+/* .right{
+  text-align: right;
+} */
+.boldie{
+  font-weight: 600;
+}
+
+/* Informacion  principal */
+.main-info{
+  padding: 2rem 0;
+  background-color: var(--blanco);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-info::before{
+  content: " ";
+  width: calc(100% - 4rem);
+  height: 1px;
+  position: absolute;
+  bottom: 0rem;
+  left: 2rem;
+  border: 1px solid var(--gris-03);
+}
+
+.main-info > article{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-WWCC19 > img {
+  width: 50px;
+  height: auto;
+  margin: .5rem;
+  filter:opacity(.7)
+}
+
+.title-WWCC19{
+  padding: 2rem 0;
+}
+
+.title-WWCC19 > .info-local,
+.title-WWCC19 > .info-visita{
+  line-height: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-WWCC19 > .info-visita{
+  flex-flow: row-reverse nowrap;
+}
+
+.info-local > p,
+.info-visita > p{
+  color: var(--azul-oscuro);
+  margin: 0 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.info-visita > p{
+  margin: 0 1rem 0 0;
+}
+
+
+.info-local > img,
+.info-visita > img{
+  width: 40px;
+  height: auto;
+  margin: 0 .5rem;
+  border: 1px solid var(--gris-01);
+  border-radius: 5px;
+}
+
+/* Detalles de los goles */
+.goals-WWCC19{
+  width: 96%;
+  margin: 0 2%;
+}
+
+.goals-WWCC19 p{
+  margin: 0.25rem;
+  font-size: .8rem;
+  color: var(--azul-oscuro);
+}
+
+.goals-WWCC19 > .local,
+.goals-WWCC19 > .visita{
+  width: 100%;
+  height: 100%;
+  margin: 0 1%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:top;
+}
+
+.goals-WWCC19 > .local > div,
+.goals-WWCC19 > .visita > div{
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--azul-oscuro-bkg);
+  display: flex;
+  flex-flow: row nowrap;
+
+
+}
+
+.goals-WWCC19 > .local > div {
+  flex-flow: row nowrap;
+  justify-content: right;
+  align-items: center;
+  align-content: flex-start;
+
+}
+
+.goals-WWCC19 > .visita > div {
+  flex-flow: row-reverse nowrap;
+  justify-content: left;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.img-ball{
+  width: 15px;
+  height: auto;
+  margin: .7rem 1rem;
+  filter:opacity(.5)
+}
+
+
+/* informacion detallada*/
+.info-detail{
+  background-color: var(--blanco);
+  width: 100%;
+  height: 100vh;
+}
+
+/* Nav de las solapas */
+.info-detail > article{
+  width: 90%;
+  margin: 0 5%;
+}
+
+.secondary-nav-links{
+  padding: .2rem 0;
+  cursor: pointer;
+}
+
+.secondary-nav-links > ul{
+  padding: 0 .5rem;
+  margin: 0%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.page-detail{
+  text-align: center;
+  color: var(--azul-oscuro-bkg-2);
+  margin: .5rem 2rem;
+  position: relative;
+  transition: color 500ms ease-in-out,
+              font-weight 250ms ease-in-out;
+}
+
+li.page-detail {
+  font-size: .75rem;
+  margin: 1rem .75rem;
+}
+
+.page-detail::before{
+  content: " ";
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  opacity: .25;
+  transition: all 250ms ease-out;
+}
+
+.page-detail:hover{
+  color: var(--dorado);
+}
+
+.selected{
+  color: var(--dorado);
+  font-weight: 600;
+}
+
+.page-detail:hover:before{
+  width: 100%;
+  height: 1%;
+  border: 1px solid var(--celeste);
+}
+
+
+
+/* informacion detalla de cada solapa */
+.info-description{
+  display: none;
+}
+
+.enable-info{
+  display: block;
+}
+
+.info-description > div {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.data{
+  padding: .3rem 0 2rem 0;
+}
+
+.data > h4,
+.data > h4.visitante {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+h5.title-team{
+  margin: 1rem 0 0 0;
+}
+
+.data > h4 > p,
+.data > h4 > p.visitante{
+  font-size: .9rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  margin: 0%;
+  color: #333;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.shirt{
+  width: 1rem;
+  margin: 0 .5rem;
+}
+
+/* medias Query */
+@media(min-width: 576px){
+  /* Informacion  principal */
+  .main-info{
+    padding: 2rem 0;
+  }
+
+  
+
+  .icon-WWCC19 > img {
+    width: 60px;
+    height: auto;
+    margin: 2rem;
+  }
+
+  .info-local > p,
+  .info-visita > p{
+    margin: 0 0 0 3rem;
+  }
+
+  .info-visita > p{
+    margin: 0 3rem 0 0;
+  }
+
+  .info-local > img,
+  .info-visita > img{
+  width: 50px;
+  height: auto;
+  margin: 0 1rem;
+  }
+
+  .secondary-nav-links > ul{
+    padding: auto;
+  }
+
+  li.page-detail {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  /* Estilos generales */
+  .right{
+    text-align: right;
+  }
+  /* Informacion  principal */
+  .main-info{
+    padding: 3rem 0;
+  }
+
+  .main-info::before{
+    width: calc(100% - 8rem);
+    left: 4rem;
+  }
+
+  /* Detalles de los goles */
+  .goals-WWCC19{
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .goals-WWCC19 > .local,
+  .goals-WWCC19 > .visita{
+    margin: 0 5%;
+  }
+
+  .goals-WWCC19 p{
+    margin: 0 .5rem;
+    font-size: 1rem;
+  }
+
+  /* informacion detallada*/
+  /* Nav de las solapas */
+  .info-detail > article{
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .secondary-nav-links{
+    padding: 1rem 0;
+  }
+
+  .secondary-nav-links > ul{
+    padding: auto;
+  }
+
+  li.page-detail {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+
+  /* informacion detalla de cada solapa */
+
+  .info-description > div {
+    flex-flow: row nowrap;
+  }
+  .data > h4.visitante{
+    justify-content:flex-end;
+  }
+  .data > h4 > p.visitante{
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+  }
+
+
+}
+
+
+
+@media(min-width: 992px){
+    /* informacion detallada*/
+  /* Nav de las solapas */
+  .info-detail > article{
+    width: 70%;
+    margin: 0 15%;
+  }
+  /* informacion detalla de cada solapa */
+  .data > h4 > p,
+  .data > h4 > p.visitante{
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 1200px){
+}
+
+@media(min-width: 1400px){
+}
