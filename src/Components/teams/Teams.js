@@ -3,7 +3,7 @@ import {useState, useEffect} from "react"
 import Button from 'react-bootstrap/Button';
 import { Offcanvas, Card, ListGroup } from 'react-bootstrap';
 import {FlagsData} from "../FlagsData"
-import banner from './banner equipos3.png'
+import banner from './banner equipos4.png'
 import './teams.css'
 
 const findFlag = ( str ) => {

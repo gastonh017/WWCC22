@@ -8,7 +8,7 @@ import Home from './Components/Home';
 import Teams from './Components/teams/Teams';
 import Games from './Components/Games';
 import GamesDetails from './Components/GamesDetails'
-import Stadiums from './Components/Stadiums'
+import Stadiums from './Components/stadiums/Stadiums'
 import Groups from './Components/groups/Groups'
 import CarouselMatches from './Components/carouselMatches'
 import useFetchMatches from "./Components/CustomHooks/useFetchMatches";
