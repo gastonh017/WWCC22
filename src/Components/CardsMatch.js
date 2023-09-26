@@ -27,12 +27,12 @@ export default function Cards (props) {
           <ListGroup.Item className="my-bg-card text-light weak" >{props.datetime.slice(11,16)} hs.</ListGroup.Item>
           
           <ListGroup.Item className="my-bg-card text-light weak" >
-            <Button variant="primary" onClick={handleShow} className="my-bg-card text-light weak">
+            <Button variant="primary" onClick={handleShow} className="my-bg-card-button text-light">
               Detalles ...
             </Button>
           </ListGroup.Item>
           <ListGroup.Item className="my-bg-card text-light weak" >
-            <Button href={`/games/${props.index + props.offset}`} >
+            <Button  className="my-bg-card-button text-light" href={`/games/${props.index + props.offset}`} >
               Más Información ...
             </Button>
           </ListGroup.Item>
@@ -43,7 +43,7 @@ export default function Cards (props) {
                 Partido {props.index + props.offset}: {props.home_team_country} Vs. {props.away_team_country}
               </Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
+            <Offcanvas.Body className="my-by-primary">
               <h6>Resultado: {props.home_team_code} {props.home_team_goals} - {props.away_team_goals} {props.away_team_code} </h6>
               <p className='parrafo-canvas'> Fecha : {props.datetime.slice(0,10)} - Time: {props.datetime.slice(11,16)} Hs. </p>
               <p className='parrafo-canvas'> Lugar :{props.stadium}</p>
