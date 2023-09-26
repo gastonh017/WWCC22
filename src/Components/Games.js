@@ -2,6 +2,7 @@ import React from "react";
 import Loading from './Loading';
 import Instance from './Instance'
 import DataMatchesFilter from './DataMatchesFilter'
+import banner from '../Components/groups/banner-grupos2.png'
 
 export default function Games({matches}) {
   
@@ -10,8 +11,8 @@ export default function Games({matches}) {
   
   return (
     <div className = "back-img">
-
-      <h1 className='my-main-title' >Women's World Cup France 2019</h1>
+ 
+      <img src={banner} alt="banner" style={{width:"100vw"}}></img>
 
       <div className = "row justify-content-evenly">
         

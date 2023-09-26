@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from "react"
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import { Offcanvas, Card, ListGroup } from 'react-bootstrap';
 import {FlagsData} from "../FlagsData"
 import banner from './banner equipos4.png'
@@ -8,7 +8,7 @@ import './teams.css'
 
 const findFlag = ( str ) => {
   for(let i = 0; i < FlagsData.length; i++ ) {
-    if(FlagsData[i].name == str){
+    if(FlagsData[i].name === str){
       return FlagsData[i].url
     }
   }
