@@ -5,11 +5,13 @@
 .boldie{
   font-weight: 600;
 }
-
+li{
+  list-style: none;
+}
 /* Informacion  principal */
 .main-info{
   padding: 2rem 0;
-  background-color: var(--blanco);
+  background-color: blue;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -140,7 +142,7 @@
 .info-detail{
   background-color: var(--blanco);
   width: 100%;
-  height: 100vh;
+  height: 10vh;
 }
 
 /* Nav de las solapas */
@@ -220,7 +222,6 @@ li.page-detail {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .data{
@@ -289,6 +290,14 @@ h5.title-team{
   width: 50px;
   height: auto;
   margin: 0 1rem;
+  }
+
+
+  /* informacion detallada*/
+  /* Nav de las solapas */
+  .info-detail > article{
+    width: 80%;
+    margin: 0 10%;
   }
 
   .secondary-nav-links > ul{

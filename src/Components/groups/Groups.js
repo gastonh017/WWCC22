@@ -1,6 +1,6 @@
 import React from "react";
 import Spinner from "react-bootstrap/Spinner";
-import TablaGrupos from "../TablaGrupos";
+// import TablaGrupos from "../TablaGrupos";
 import "./groups.css";
 import banner from './banner-grupos2.png'
 
@@ -9,7 +9,7 @@ import { FlagsData } from "../FlagsData";
 
 const findFlag = (str) => {
   for (let i = 0; i < FlagsData.length; i++) {
-    if (FlagsData[i].name == str) {
+    if (FlagsData[i].name === str) {
       return FlagsData[i].url;
     }
   }
@@ -29,15 +29,15 @@ function Groups() {
       .then((res) => res.json())
       .then((data) => {
         setTeams(data);
-        console.log(data);
-        console.log(data[0].group);
+        //console.log(data);
+        //console.log(data[0].group);
         //				setGroup1(data.filter(team => team.group_id === 1))
-        const teamsGroupA = data.filter((team) => team.group == "A");
-        const teamsGroupB = data.filter((team) => team.group == "B");
-        const teamsGroupC = data.filter((team) => team.group == "C");
-        const teamsGroupD = data.filter((team) => team.group == "D");
-        const teamsGroupE = data.filter((team) => team.group == "E");
-        const teamsGroupF = data.filter((team) => team.group == "F");
+        const teamsGroupA = data.filter((team) => team.group === "A");
+        const teamsGroupB = data.filter((team) => team.group === "B");
+        const teamsGroupC = data.filter((team) => team.group === "C");
+        const teamsGroupD = data.filter((team) => team.group === "D");
+        const teamsGroupE = data.filter((team) => team.group === "E");
+        const teamsGroupF = data.filter((team) => team.group === "F");
         // console.log(teamsGroupA);
         setGroupA(teamsGroupA);
         setGroupB(teamsGroupB);
