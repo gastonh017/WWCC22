@@ -10,7 +10,7 @@ export default function CardMainHome(props) {
         </h3>
       </article>
       <article className="container">
-        <div className="card">
+        <div className="main-card">
           <div id={props.id} className="front"></div>
             <a href={props.link} className="back">Clickeá para ver</a>
         </div>

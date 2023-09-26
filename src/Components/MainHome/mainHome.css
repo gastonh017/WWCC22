@@ -35,16 +35,16 @@
 }
 
 .container {
-  width: 90%;
+  width: 90%; 
   height: 200px;
 }
 
-.container:hover>.card {
+.container:hover>.main-card {
   cursor: pointer;
   transform: rotateY(180deg);
 }
 
-.card {
+.main-card {
   height: 100%;
   width: 100%;
   position: relative;
@@ -163,7 +163,7 @@ a.back {
     margin-left: 10%;
   }
 
-  .card {
+  .main-card {
     height: 17vw;
     width: 25vw;
   }
