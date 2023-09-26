@@ -4,12 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // React-Bootstrap
 import Row from 'react-bootstrap/Row';
 
-//import Home from './Components/Home';
-import Teams from './Components/Teams';
+import Teams from './Components/teams/Teams';
 import Games from './Components/Games';
 import GamesDetails from './Components/GameDetail/GameDetail'
-import Stadiums from './Components/Stadiums'
-import Groups from './Components/Groups'
+import Stadiums from './Components/stadiums/Stadiums'
+import Groups from './Components/groups/Groups'
 import CarouselMatches from './Components/carouselMatches'
 import useFetchMatches from "./Components/CustomHooks/useFetchMatches";
 

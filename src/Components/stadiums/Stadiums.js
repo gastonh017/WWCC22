@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
-import Loading from './Loading';
+import Loading from '../Loading';
 import Stadium from './Stadium'
+import './stadiums.css'
+import banner from './banner estadios.png'
 
 const Stadiums = () => {
   const [stadiums, setStadiums] = useState([]);
@@ -30,10 +32,9 @@ const Stadiums = () => {
     },[])
   //console.log(stadiums);
   return (
-    <div className = "back-img">
-      <h1 className='my-main-title' > Todos los Estadios</h1>
-      <hr />
-      <div className = "row justify-content-evenly">
+    <>
+      <img src={banner} alt='banner estadios'></img>
+      <div className = "container-stadium">
 
         {
           stadiums.length === 0 ? 
@@ -47,7 +48,7 @@ const Stadiums = () => {
               />
         )}
       </div>
-    </div>
+    </>
   )
 }
 
