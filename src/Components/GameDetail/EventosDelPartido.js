@@ -1,10 +1,10 @@
-import clock from "./images/clock.png";
+import clock from "./images/clock.svg";
 import ball from "./images/ball.png";
-import substitutionIn from "./images/greenArrow.png";
-import substitutionOut from "./images/redArrow.png";
-import dobleYellowCard from "./images/dobleYelowCard.png";
-import yellowCard from "./images/yelowCard1.png";
-import redCard from "./images/redCard1.png";
+import substitutionIn from "./images/greenArrow.svg";
+import substitutionOut from "./images/redArrow.svg";
+//import dobleYellowCard from "./images/dobleYelowCard.svg";
+import yellowCard from "./images/yelowCard.svg";
+import redCard from "./images/redCard.svg";
 
 export default function EventosDelPartido({ data,role }) {
   return (
@@ -12,7 +12,7 @@ export default function EventosDelPartido({ data,role }) {
       {data.map((element, index) => (
         <h4 key={index} className={role}>
           <p className={role}>
-            <img src={clock} className="shirt" alt={index} />
+            <img src={clock} className="shirt" alt={index} style={{color:"#fff"}}/>
             <spam>{element.time}</spam>
             <spam>{" - "}</spam>
             <spam>{element.player}</spam>
@@ -28,17 +28,17 @@ export default function EventosDelPartido({ data,role }) {
             )}
 
             {element.type_of_event === "substitution-in" ? (
-              <img src={substitutionIn} className="shirt" alt={index} />
+              <img src={substitutionIn} className="shirt" alt={index} style={{ transform: 'rotate(180deg)' }} />
             ) : (
               ""
             )}
             {element.type_of_event === "substitution-out" ? (
-              <img src={substitutionOut} className="shirt" alt={index} />
+              <img src={substitutionOut} className="shirt" alt={index} style={{ transform: 'rotate(0deg)' }}/>
             ) : (
               ""
             )}
             {element.type_of_event === "yellow-card" ? (
-              <img src={yellowCard} className="shirt" alt={index} />
+              <img src={yellowCard} className="shirt" alt={index} style={{ transform: 'rotate(90deg)' }}/>
             ) : (
               ""
             )}
@@ -48,7 +48,10 @@ export default function EventosDelPartido({ data,role }) {
               ""
             )}
             {element.type_of_event === "yellow-card-second" ? (
-              <img src={dobleYellowCard} className="shirt" alt={index} />
+              <>
+                <img src={yellowCard} className="shirt" alt={index} style={{ transform: 'rotate(90deg)' }}/>
+                <img src={yellowCard} className="shirt" alt={index} style={{ transform: 'rotate(90deg)' }}/>
+              </>
             ) : (
               ""
             )}

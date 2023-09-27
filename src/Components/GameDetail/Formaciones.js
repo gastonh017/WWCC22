@@ -1,5 +1,5 @@
-import Shirt from "./images/shirt.png";
-import captain from "./images/captain.png";
+import Shirt from "./images/shirt.svg";
+import captain from "./images/captain.svg";
 
 export default function Formaciones({ data,role }) {
   const posicion = (position) => {

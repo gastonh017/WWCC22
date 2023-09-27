@@ -72,7 +72,7 @@ export default function GamesDetails({ matches }) {
               }}
               role="info-local"
             />
-            <p>-</p>
+            <p style={{color:"#18014d"}}>-</p>
             <MainInfo
               data={{
                 home: match.away_team,

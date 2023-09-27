@@ -1,17 +1,16 @@
 /* Estilos generales */
-/* .right{
-  text-align: right;
-} */
 .boldie{
+
   font-weight: 600;
 }
 li{
   list-style: none;
 }
+
 /* Informacion  principal */
 .main-info{
   padding: 2rem 0;
-  background-color: blue;
+  background-color: var(--blanco);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -142,7 +141,7 @@ li{
 .info-detail{
   background-color: var(--blanco);
   width: 100%;
-  height: 10vh;
+  height: 4rem;
 }
 
 /* Nav de las solapas */
@@ -224,6 +223,10 @@ li.page-detail {
   justify-content: space-evenly;
 }
 
+.info-description > div > div > h3{
+  color: var(--blanco);
+}
+
 .data{
   padding: .3rem 0 2rem 0;
 }
@@ -233,6 +236,7 @@ li.page-detail {
   font-size: 1rem;
   font-weight: 600;
   line-height: 2rem;
+  color: var(--blanco);
   margin: 0;
   display: flex;
   flex-flow: row nowrap;
@@ -242,15 +246,16 @@ li.page-detail {
 
 h5.title-team{
   margin: 1rem 0 0 0;
+  color: var(--blanco);
 }
 
-.data > h4 > p,
-.data > h4 > p.visitante{
+.data > h4 > p.visitante,
+.data > h4 > p{
   font-size: .9rem;
   font-weight: 400;
+  color: var(--blanco);
   padding: 0 1rem;
   margin: 0%;
-  color: #333;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -325,6 +330,11 @@ h5.title-team{
     left: 4rem;
   }
 
+    /* informacion detallada*/
+    .info-detail{
+      height: 5rem;
+    }
+
   /* Detalles de los goles */
   .goals-WWCC19{
     width: 80%;
@@ -367,9 +377,11 @@ h5.title-team{
     flex-flow: row nowrap;
   }
   .data > h4.visitante{
+    color: var(--blanco);
     justify-content:flex-end;
   }
   .data > h4 > p.visitante{
+    color: var(--blanco);
     flex-flow: row-reverse nowrap;
     align-items: center;
   }
@@ -389,6 +401,7 @@ h5.title-team{
   /* informacion detalla de cada solapa */
   .data > h4 > p,
   .data > h4 > p.visitante{
+    color: var(--blanco);
     font-size: 1rem;
   }
 }
